@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site moderno com boas práticas de usabilidade">
+    <title>Site Moderno</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Usando a fonte 'Roboto' do Google Fonts  -->
+</head>
+<body>
+    <header class="topo">
+        <div class="menu">
+            <button type="submit" class="menu button">
+                <img src="style/iconedemenu.png" alt="menu">
+            </button>
+        </div>
+        <!-- Logo simples à esquerda -->
+        <div class="logo">LOGO</div>
+            
+        <div class="search-container">
+            <form action="resultado-busca.html" method="get"> <!-- rever  -->
+                <div class="search-box">
+                    <input type="text" id="search" name="search" placeholder="Digite sua busca..." required>
+                    <button type="submit" class="search-button">
+                        <img src="style/iconedebusca.png" alt="Buscar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="outer-box">
+            <section id="home" class="hero-section">
+
+                <div class="hero-content">
+                    <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+                    <p>Amet, consectetur adipisicing lorem ipsum dolor sit  </p>
+                    <!-- Esta é a caixa externa que se ajusta ao tamanho da página -->
+                    <div class="inner-box">
+                        <!-- Esta é a caixa interna que fica centralizada dentro da caixa externa -->
+                        <h1>Caixa Interna</h1>
+                        <p>.</p>
+                    </div>
+                   
+                </div>
+            </section>
+           
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* Reset básico para garantir uniformidade entre navegadores */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para tornar o menu flexível em telas menores */
+}
+
+/* Logo, menu e busca */
+.topo {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
+    align-items: flex-start;
+    width: 100%;
+}
+.menu{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.menu button{
+    align-items: flex-start;
+    background-color:unset;
+    border: none;
+    cursor: pointer;
+}
+.menu button img{
+    width: 40px;
+    height: 40px;
+}
+.logo {
+    padding-right: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Para quebrar em linhas menores se necessário */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6347; /* Cor de destaque ao passar o mouse nos links */
+}
+
+/* Centralizando o contêiner de busca */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    width: 100%; /* Altera para 100% para telas menores */
+    max-width: 300px; /* Define um limite máximo para não ultrapassar o design */
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-box button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-box button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Efeito ao focar no campo de busca */
+.search-box input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo da seção hero (seção de destaque) */
+.hero-section {
+    background-color: #555;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 100%;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para a caixa externa */
+.outer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altera de altura fixa para mínima para responsividade */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Estilo para a caixa interna */
+.inner-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.inner-box h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.inner-box p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .hero-section {
+        height: auto;
+        padding: 20px;
+    }
+
+    .inner-box {
+        padding: 20px;
+    }
+}
