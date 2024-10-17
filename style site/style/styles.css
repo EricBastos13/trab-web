@@ -7,6 +7,7 @@
 }
 
 body {
+    display: flexbox;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
@@ -24,13 +25,25 @@ nav {
     align-items: center;
     flex-wrap: wrap; /* Para tornar o menu flexível em telas menores */
 }
+main{
+    padding-bottom: 0%;
+    padding-top: 80.91px;
+    min-height: 1200px; 
+}
 
 /* Logo, menu e busca */
 .topo {
+    position: fixed;
     display: flex;
     flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
     align-items: flex-start;
     width: 100%;
+}
+.logo {
+    padding-left: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1;
 }
 .menu{
     display: flex;
@@ -44,35 +57,60 @@ nav {
     cursor: pointer;
 }
 .menu button img{
+    z-index: 2;
     width: 40px;
     height: 40px;
 }
-.logo {
-    padding-right: 40px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    flex: 1;
+/*barra do menu*/
+.barraltr {
+    z-index: 1;
+    position: fixed;
+    left: -250px; /* Escondido inicialmente */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s;
+    padding: 20px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap; /* Para quebrar em linhas menores se necessário */
+.barraltr ul {
+    list-style-type: none;
+    padding-top:-100px;
 }
 
-.nav-links li {
-    margin-left: 20px;
+.barraltr ul li {
+    margin: 15px 0;
 }
 
-.nav-links a {
-    color: #fff;
+.barraltr ul li a {
+    color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #ff6347; /* Cor de destaque ao passar o mouse nos links */
+.barraltr.atv {
+    margin-top: 0;
+    padding-top: 5px;
+    left: 0; /* Mostra o menu */
+}
+
+.barraltr ul li a:hover {
+    background-color: #575757; /* Cor ao passar o mouse */
+    color: #FFD700; /* Nova cor do texto ao passar o mouse */
+}
+
+.barraltr.atv {
+    left: 0; /* Mostra o menu */
+}
+.page {
+    display: none; /* Oculta todas as páginas por padrão */
+}
+
+.page.active {
+    display: block; /* Exibe a página ativa */
 }
 
 /* Centralizando o contêiner de busca */
@@ -122,59 +160,12 @@ body {
     outline: none;
 }
 
-/* Estilo da seção hero (seção de destaque) */
-.hero-section {
-    background-color: #555;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.hero-content {
-    max-width: 100%;
-}
-
 /* Estilo do rodapé */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-}
-
-/* Estilo para a caixa externa */
-.outer-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Altera de altura fixa para mínima para responsividade */
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-/* Estilo para a caixa interna */
-.inner-box {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-}
-
-.inner-box h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
-}
-
-.inner-box p {
-    font-size: 1.2rem;
-    color: #666;
 }
 
 /* Responsividade para telas menores */
@@ -187,7 +178,7 @@ footer {
         flex-direction: column;
     }
 
-    .nav-links {
+    .barraltr {
         justify-content: center;
         margin-top: 10px;
     }

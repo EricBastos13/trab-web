@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100%; /* Altura total da viewport */
+}
+
+.sidebar {
+    width: 250px; /* Largura fixa para a sidebar */
+    background-color: #f0f0f0; /* Cor de fundo da sidebar */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px; /* Tamanho da imagem do perfil */
+    height: 100px; /* Tamanho da imagem do perfil */
+    border-radius: 50%; /* Círculo */
+    margin-bottom: 10px;
+}
+
+.profile-name {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.profile-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.profile-likes {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.content {
+    flex-grow: 1; /* O conteúdo ocupa o restante da largura */
+    padding: 20px;
+}
