@@ -5,42 +5,38 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-
-body {
-    display: flexbox;
+.content {
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+}
+html, body {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+    height: 1200px;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
 }
-
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Para tornar o menu flexível em telas menores */
 }
-main{
-    padding-bottom: 0%;
-    padding-top: 80.91px;
-    min-height: 1200px; 
-}
-
 /* Logo, menu e busca */
 .topo {
-    position: fixed;
     display: flex;
     flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
     align-items: flex-start;
     width: 100%;
+    padding: 20px;
 }
 .logo {
-    padding-left: 40px;
+    padding-left: 20px;
     font-size: 1.5rem;
     font-weight: bold;
     flex: 1;
@@ -51,13 +47,12 @@ main{
     align-items: center;
 }
 .menu button{
-    align-items: flex-start;
+    align-items:initial;
     background-color:unset;
     border: none;
     cursor: pointer;
 }
 .menu button img{
-    z-index: 2;
     width: 40px;
     height: 40px;
 }
@@ -67,16 +62,16 @@ main{
     position: fixed;
     left: -250px; /* Escondido inicialmente */
     width: 250px;
-    height: 100%;
+    height: 1000px;
     background-color: #333;
     color: white;
     transition: left 0.3s;
     padding: 20px;
+
 }
 
 .barraltr ul {
     list-style-type: none;
-    padding-top:-100px;
 }
 
 .barraltr ul li {
@@ -92,9 +87,10 @@ main{
 }
 
 .barraltr.atv {
-    margin-top: 0;
-    padding-top: 5px;
+    margin-top: -20px;
+    padding-top: 20px;
     left: 0; /* Mostra o menu */
+    box-shadow: 7px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .barraltr ul li a:hover {
@@ -111,12 +107,6 @@ main{
 
 .page.active {
     display: block; /* Exibe a página ativa */
-}
-
-/* Centralizando o contêiner de busca */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
 }
 
 .search-container {
@@ -164,8 +154,11 @@ body {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
     text-align: center;
+      padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 /* Responsividade para telas menores */

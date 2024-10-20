@@ -1,5 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: nowrap;
     margin: 0;
     padding: 0;
 }
@@ -7,15 +14,19 @@ body {
 .container {
     display: flex;
     height: 100%; /* Altura total da viewport */
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+    flex-direction: column;
 }
 
-.sidebar {
-    width: 250px; /* Largura fixa para a sidebar */
-    background-color: #f0f0f0; /* Cor de fundo da sidebar */
-    padding: 20px;
+.topbar {
+    height: 200px;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -24,9 +35,9 @@ body {
 }
 
 .profile-pic {
-    width: 100px; /* Tamanho da imagem do perfil */
-    height: 100px; /* Tamanho da imagem do perfil */
-    border-radius: 50%; /* Círculo */
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
     margin-bottom: 10px;
 }
 
@@ -41,11 +52,68 @@ body {
 }
 
 .profile-likes {
+    font-size: xx-large;
+    padding: 60px;
     font-weight: bold;
-    margin-top: 10px;
 }
 
 .content {
-    flex-grow: 1; /* O conteúdo ocupa o restante da largura */
+    flex-grow: 1;
     padding: 20px;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column; 
+        height: auto;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-likes {
+        font-size: large;
+        padding: 20px 0;
+    }
+
+    .profile-name {
+        font-size: 1.2em;
+    }
+
+    .profile-description {
+        font-size: 0.8em;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-likes {
+        font-size: medium;
+        padding: 10px 0;
+    }
+
+    .profile-name {
+        font-size: 1em;
+    }
+
+    .profile-description {
+        font-size: 0.7em;
+    }
+
+    .content {
+        padding: 5px;
+    }
 }
