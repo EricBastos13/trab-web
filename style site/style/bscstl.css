@@ -1,0 +1,64 @@
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.publication-block {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.publication-block:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.publication-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover; /* Garante que a imagem ocupe todo o espaço */
+    margin-right: 15px;
+    max-width: 500px;
+}
+
+.publication-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.publication-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.publication-info p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .publication-block {
+        flex-direction: column; /* Empilha a imagem e o texto em telas pequenas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .publication-image {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .publication-info {
+        padding: 10px;
+    }
+}

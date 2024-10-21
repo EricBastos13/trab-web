@@ -58,7 +58,7 @@ nav {
 }
 /*barra do menu*/
 .barraltr {
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     left: -250px; /* Escondido inicialmente */
     width: 250px;
