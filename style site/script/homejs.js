@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     const slider = document.getElementById('slider');
 
     // Função para adicionar publicações ao slider
@@ -30,3 +30,4 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSlider();
     };
 });
+*/
